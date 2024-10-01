@@ -1,0 +1,225 @@
+* {
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: block;
+}
+
+h2,h4 {
+    color: white;
+    font-size: 32px;
+}
+#cont {
+    text-align: center;
+    width: 100%;
+    background-color: rgb(59, 135, 111);
+    border-radius: 10px;
+}
+
+.form-row {
+    /* text-align: center; */
+    /* color: white; */
+    font-size: 20px;
+
+}
+
+.txtName {
+    width: 20% !important;
+}
+.txtContact {
+    width: 20% !important;
+}
+
+input[type = text] {
+    border-radius: 20px;
+    background-color: rgb(166, 220, 202);
+}
+
+#txtAddress {
+    border-radius: 20px;
+    background-color: rgb(166, 220, 202);
+}
+
+.txtAltNo {
+    width: 20% !important;
+}
+
+label {
+    color: green;
+}
+
+#name {
+    color: green;
+}
+
+#btnClass {
+width: 50%;
+display: inline;
+}
+
+#btnClear {
+ position: relative;
+ background-color:  rgb(177, 27, 27);
+ border-radius: 10px;
+ display: inline;
+}
+
+#btnClear:hover {
+    border-radius: 20px;
+    transition: 600ms;
+}
+
+#btnSave {
+    position: relative;
+    background-color: aquamarine;
+    border-radius: 10px;
+}
+
+#btnSave:hover {
+    background-color: aquamarine;
+    border-radius: 20px;
+    transition: 600ms;
+}
+
+#tblData {
+    padding: 10px;
+    margin: auto;
+    background-color: rgb(51, 84, 73);
+    border-radius: 20px;
+}
+
+.btn-edit {
+    position: relative;
+    background-color: aquamarine;
+    border-radius: 10px;
+}
+
+.btn-edit:hover {
+    border-radius: 20px;
+    transition: 600ms;
+}
+
+.btn-delete {
+    position: relative;
+    background-color:  rgb(177, 27, 27);
+    border-radius: 10px;
+    display: inline;
+}
+
+.btn-delete:hover {
+    border-radius: 20px;
+    transition: 600ms;
+}
+
+#searchInputA {
+    font-weight: bold;
+    font-size: 18px;
+    
+}
+
+#searchInput {
+    width: 90%;
+    font-weight: bold;
+}
+
+.search {
+    /* background-color: #fff; */
+    font-family: 'Open Sans' , sans-serif;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+.searchTerm {
+    width: 100%;
+    border: 3px solid rgb(43, 113, 122);
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+    font-size: 20px;
+}
+
+.searchTerm:focus {
+    color: black;
+}
+
+.butn {
+    /* height: 35px; */
+    border: 1px solid rgb(43, 113, 122);
+    background: rgb(43, 113, 122);
+    /* text-align: center; */
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.search {
+    width: 50%;
+    position: absolute;
+    top: 170%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    color: #383838;
+    padding: 10px 40px;
+    border-radius: 6px;
+}
+
+ul {
+    margin: 20px 30px;
+    display: block;
+}
+
+ul li {
+    display: block;
+    margin: 0 10px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 45px;
+    cursor: pointer;
+}
+
+ul li.active {
+    color: #fff;
+    background-image: linear-gradient(#ff4568,#ff4568);
+    background-repeat: no-repeat;
+}
+
+
+.btn1 , .btn2 {
+    display: inline-block;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 500;
+    color: #383838;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn1 img {
+    width: 24px;
+    margin-right: 15px;
+}
+
+.btn2 img {
+    width: 24px;
+    margin-left: 15px;
+    transform: rotate(180deg);
+}

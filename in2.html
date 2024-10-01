@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- StyleSheet -->
+  <link rel="stylesheet" href="./css/styles.css" />
+  <title>Sign Up Or Login Here</title>
+</head>
+
+<body>
+  <section>
+    <div class="container">
+      <form action="in.php" method="post">
+        <div class="form-control">
+          <h2>Welcome To FarmPro!</h2>
+          <p>It's good to have you.</p>
+          <input type="text" name="username" placeholder="Enter Full Name" required>
+          <input type="email" name="useremail" placeholder="Enter Email" required />
+          <input type="text" name="userphone" placeholder="Enter Phone Number" required>
+          <div>
+            <input type="password" id="password" placeholder="Password" required />
+            <div class="icon form-icon">
+            </div>
+          </div>
+          <div>
+            <input id="confirmPassword" type="password" placeholder="Confirm Password" required />
+            <div class="icon form-icon">
+            </div>
+          </div> <br>
+          <div id="select-container">
+            <select id="userType" name="userType">
+              <option value="buyer">Buyer</option>
+              <option value="seller">Seller</option>
+              <option value="Both">Buyer and Seller</option>
+            </select>
+          </div> <br>
+          <input id="Register" type="submit" value="Register" onclick="return validateForm()" />
+        </div>
+        <div class="img-box">
+          <img src="./images/trial.svg" alt="" />
+        </div>
+    </div>
+    </div>
+  </section>
+  <!-- IndexJs -->
+  <script src="./js/index.js"></script>
+  <script>
+    function validateForm() {
+      var password = document.getElementById("password").value;
+      var confirmPassword = document.getElementById("confirmPassword").value;
+      if (password != confirmPassword) {
+        alert("Passwords do not match.");
+        location.reload();
+        return false;
+      }
+
+      var selectElement = document.getElementById("userType");
+      var userType = selectElement.options[selectElement.selectedIndex].value;
+
+      switch (userType) {
+        case "buyer":
+          window.location.href = "buy.html";
+          break;
+
+        case "seller":
+          window.location.href = "seller.html";
+
+          break;
+        case "both":
+          window.location.href = "sell_and_buy.html";
+          break;
+        default:
+          break;
+      }
+
+      return true;
+    }
+  </script>
+</body>
+
+</html>

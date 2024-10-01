@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <title>FarmPro</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head> 
+<body>
+  <div class="container">
+    <div class="jumbotron text-center bg-success text-white" id="cont">
+      <h2>FarmerPro</h2>
+      <h4> Insert, Update & Delete Farmer Details</h4>
+      <i class='bx bx-moon change-theme' id="theme-button"></i>
+    </div>
+    <div class="form-row">
+      <div class="col-md-3">
+        <labe id="name">Name <span class="errdiv">:</span></label><br>
+        <input id="txtName" type="text" class="form-control txt txtName" placeholder="Enter Name" required>
+        <input id="txtId" type="hidden" class="form-control txt">
+      </div>
+      <div class="col-md-3 col-sm-6 col-6">
+        <label id="contact">Contact No <span class="errdiv">:</span></label><br>
+        <input id="txtContact" data-type="number" type="text" minlength="10" maxlength="10"
+          class="form-control txt txtContact" placeholder="Contact No" required>
+      </div>
+      <div class="col-md-3 col-sm-6 col-6">
+        <label>No. of FarmGround<span class="errdiv">:</span></label><br>
+        <input id="txtAltNo" type="text" class="form-control txt txtAltNo" minlength="5" maxlength="7"
+          placeholder="FarmGround No.">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-6 col-sm-7">
+        <label>Address <span class="errdiv">:</span></label><br>
+        <textarea id="txtAddress" class="form-control txt txtAddress" rows="3" minlength="15"
+          placeholder="Enter Address" required></textarea>
+      </div>
+    </div>
+    <div class="row pt-2" id="btnClass">
+      <div class="col-md-2">
+        <button type="button" class="btn btn-success" id="btnSave">Save</button>
+      </div>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-secondary" id="btnClear">Clear</button>
+      </div>
+    </div>
+    <div class="row pt-3">
+      <div class="col-md-12 col-sm-12 col-12 p-2 ">
+        <table id="tblData" class="table table-bordered table-hover table-striped">
+          <thead>
+            <tr>
+              <th>Sr No</th>
+              <th>Name</th>
+              <th>Phone</th>
+              <th>FarmGround No.</th>
+              <th>Address</th>
+              <th class="text-center">Action</th>
+            </tr>
+          </thead>
+          <tbody> 
+          </tbody>
+        </table>
+        <div class="pagination">
+          <button class="btn1"><img src="arrow.png">Prev</button>
+          <ul>
+            <li class="link active" value="1" onclick="activeLink()">1</li>
+            <li class="link" value="2" onclick="activeLink()">2</li>
+            <li class="link" value="3" onclick="activeLink()">3</li>
+            <li class="link" value="4" onclick="activeLink()">4</li>
+            <li class="link" value="5" onclick="activeLink()">5</li>
+            <li class="link" value="6" onclick="activeLink()">6</li>
+          </ul>
+
+          <button class="btn2">Next<img src="arrow.png"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var emptyRow = "<tr><td colspan='6' class='text-center'> No Records Available</td></tr>";
+    $(document).ready(function () {
+      loadDataFromLocal();
+      $('#tblData').on('click', '.btn-edit', function () {
+        debugger;
+        const name = $(this).parent().parent().find(".txtName").html();
+        const contact = $(this).parent().parent().find(".txtContact").html();
+        const altContact = $(this).parent().parent().find(".txtAltNo").html();
+        const address = $(this).parent().parent().find(".txtAddress").html();
+        const id = $(this).parent().parent().find(".txtName").attr("data-id");
+        $("#txtName").val(name);
+        $("#txtContact").val(contact);
+        $("#txtAltNo").val(altContact);
+        $("#txtAddress").val(address);
+        $("#txtId").val(id);
+        $("#btnSave").text("Update");
+      });
+
+      $('#tblData').on('click', '.btn-delete', function () {
+        debugger;
+        const id = $(this).parent().parent().find(".txtName").attr("data-id");
+        deleteDataFromLocal(id);
+      });
+
+      $("#btnSave").click(function () {
+        debugger;
+        if ($("#txtId").val() == '') {
+          addDataToLocal();
+        } else {
+          updateDataFromLocal();
+        }
+      });
+
+      $("#btnClear").click(function () {
+        debugger;
+        clearForm();
+      });
+    });
+
+    function clearForm() {
+      debugger;
+      $("#txtName").val("");
+      $("#txtContact").val("");
+      $("#txtAltNo").val("");
+      $("#txtAddress").val("");
+      $("#btnSave").text("Add");
+    }
+
+    function addEmptyRow() {
+      debugger;
+      if ($("#tblData tbody").children().children().length == 0) {
+        $("#tblData tbody").append(emptyRow);
+      }
+    }
+
+    function loadDataFromLocal() {
+      debugger;
+      let localData = localStorage.getItem('localData');
+      if (localData) {
+        $("#tblData tbody").html("");
+        let localArray = JSON.parse(localData);
+        let index = 1;
+        localArray.forEach(element => {
+          let dynamicTR = "<tr>";
+          dynamicTR = dynamicTR + "<td> " + index + "</td>";
+          dynamicTR = dynamicTR + "<td class='txtName'  data-id=" + element.id + ">" + element.name + "</td>";
+          dynamicTR = dynamicTR + "<td class='txtContact'>" + element.contact + "</td>";
+          dynamicTR = dynamicTR + "<td class='txtAltNo'>" + element.altContact + "</td>";
+          dynamicTR = dynamicTR + "<td class='txtAddress'>" + element.address + "</td>";
+          dynamicTR = dynamicTR + "    <td class='tdAction text-center'>";
+          dynamicTR = dynamicTR + "        <button class='btn btn-sm btn-success btn-edit'> Edit</button>";
+          dynamicTR = dynamicTR + "        <button class='btn btn-sm btn-danger btn-delete'> Delete</button>";
+          dynamicTR = dynamicTR + "    </td>";
+          dynamicTR = dynamicTR + " </tr>";
+          $("#tblData tbody").append(dynamicTR);
+          index++;
+        });
+      }
+      addEmptyRow();
+    }
+
+    function addDataToLocal() {
+      debugger;
+      let localData = localStorage.getItem('localData');
+      if (localData) {
+        let localArray = JSON.parse(localData);
+        const obj = {
+          id: localArray.length + 1,
+          name: $("#txtName").val(),
+          contact: $("#txtContact").val(),
+          altContact: $("#txtAltNo").val(),
+          address: $("#txtAddress").val()
+        };
+        localArray.push(obj);
+        localStorage.setItem('localData', JSON.stringify(localArray));
+        loadDataFromLocal();
+      } else {
+        const arryObj = [0];
+        const obj = {
+          id: 1,
+          name: $("#txtName").val(),
+          contact: $("#txtContact").val(),
+          altContact: $("#txtAltNo").val(),
+          address: $("#txtAddress").val()
+        };
+        arryObj.push(obj);
+        localStorage.setItem('localData', JSON.stringify(arryObj));
+        loadDataFromLocal();
+      }
+      clearForm();
+    }
+
+    function updateDataFromLocal() {
+      debugger;
+      let localData = localStorage.getItem('localData');
+      let localArray = JSON.parse(localData);
+      const oldRecord = localArray.find(m => m.id == $("#txtId").val());
+      oldRecord.name = $("#txtName").val();
+      oldRecord.contact = $("#txtContact").val();
+      oldRecord.altContact = $("#txtAltNo").val();
+      oldRecord.address = $("#txtAddress").val();
+      localStorage.setItem('localData', JSON.stringify(localArray));
+      loadDataFromLocal();
+      clearForm();
+    }
+
+    function deleteDataFromLocal(id) {
+      debugger;
+      let localData = localStorage.getItem('localData');
+      let localArray = JSON.parse(localData);
+      let i = 0;
+      while (i < localArray.length) {
+        if (localArray[i].id === Number(id)) {
+          localArray.splice(i, 1);
+        } else {
+          ++i;
+        }
+      }
+      localStorage.setItem('localData', JSON.stringify(localArray));
+      loadDataFromLocal();
+    }
+
+
+// DARK $$ LIGHT THEME
+
+const themeButton = document.getElementById('theme-button')
+const darkTheme = 'dark-theme'
+const iconTheme = 'bx-sun'
+const whiteText = 'white-text'
+
+// Previously selected theme (if user selected)
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selected-icon')
+
+// We obtain the current theme that the interface has by validating the dark-theme class
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx-moon' : 'bx-sun'
+
+// Function to set the theme
+const setTheme = (theme) => {
+  document.body.classList.toggle(darkTheme, theme === 'dark')
+  themeButton.classList.toggle(iconTheme, theme === 'dark')
+  document.body.classList.toggle(whiteText, theme === 'dark')
+  document.body.style.backgroundColor = theme === 'dark' ? 'black' : 'white'
+  // We save the theme and the current icon that the user chose
+  localStorage.setItem('selected-theme', theme)
+  localStorage.setItem('selected-icon', getCurrentIcon())
+}
+
+// We validate if the user previously chose a theme
+if (selectedTheme) {
+  setTheme(selectedTheme)
+}
+
+// Activate / deactivate the theme manually with the button
+themeButton.addEventListener('click', () => {
+  const theme = getCurrentTheme() === 'dark' ? 'light' : 'dark'
+  setTheme(theme)
+})
+
+if (selectedTheme == darkTheme) {
+  document.getElementsByTagName(label).style.color='white';
+} else {
+  document.getElementsByTagName(label).style.color='black';
+}
+
+    /*==================== SCROLL REVEAL ANIMATION ====================*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '30px',
+    duration: 1000,
+    reset: true
+});
+
+sr.reveal(`.home__data, .home__img,
+            .about__data, .about__img,
+            .services__content, .menu__content,
+            .app__data, .app__img,
+            .contact__data, .contact__button,
+            .footer__content`, {
+    interval: 200
+})
+
+
+
+
+
+let link = document.getElementsByClassName("link");
+
+let currentValue = l;
+function activeLink() {
+  for (l of link) {
+    l.classList.remove("active");
+  }
+  event.targer.classList.add("active");
+  currentValue = event.target.value;
+}
+  </script>
+  <!-- <script src="./assets/js/main.js"></script> -->
+</body>
+
+</html>

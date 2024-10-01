@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>FarmPro</title>
+</head>
+
+<body>
+
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class='bx bx-chevron-up scrolltop__icon'></i>
+    </a>
+    <header class="l-header" id="header">
+        <nav class="nav bd-container">
+            <a href="#" class="nav__logo">FarmPro</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="in2.html" class="nav__link">Register</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact us</a></li>
+
+                    <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <section class="home" id="home">
+            <div class="home__container bd-container bd-grid">
+                <div class="home__data">
+                    <h1 class="home__title">Farmer Pro</h1>
+                    <h2 class="home__subtitle">Start your own agriculture business <br> this week.</h2>
+                    <a href="#services" class="button">View our Services</a>
+                </div>
+
+                <svg width="500px" height="500px" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                    class="iconify iconify--noto" preserveAspectRatio="xMidYMid meet">
+
+                    <path
+                        d="M51.47 37.93C25.35 37.24-5.38 8.76 5.01 39.2c5.98 17.5 26.2 26.03 46.46 25.77c20.26.26 40.48-8.26 46.46-25.77c10.39-30.44-20.34-1.96-46.46-1.27z"
+                        fill="#e59600">
+
+                    </path>
+
+                    <path
+                        d="M86.54 80.78c-1.04-1.98-.2-3.94 3.07-7.26c4.06-4.11 9.41-14.79 4.1-25.56c0 0-.84-1.62-.83-1.66l-.75.83c-.15-.3-.31-.61-.49-.91c-1.15-.16-78.99-.16-80.14 0c-.32.56-.6 1.12-.86 1.68l-.99-.08c-4.9 11.84-.45 21.23 3.87 25.69c2.72 2.81 4.18 5.01 3.06 7.31c-.56 1.15-1.43 1.82-2.67 2.07l-2.15.42l1.17 1.81c.42.66 1 1.21 1.67 1.6c1.87 1.09 4.13 1.36 5.71 1.4c.18 0 .44.2.83.62c5.08 5.53 9.08 7.29 21.42 7.74l17.85.01C72.89 96.05 76.9 94.3 82 88.75c.39-.43.65-.62.83-.62c1.58-.04 3.85-.31 5.71-1.4c.67-.39 1.24-.94 1.67-1.6l1.17-1.81l-2.15-.42c-1.19-.25-2.07-.94-2.69-2.12z"
+                        fill="#3c2c23">
+
+                    </path>
+
+                    <radialGradient id="IconifyId17ecdb2904d178eab8567" cx="108.89" cy="44.966" r="22.987"
+                        gradientTransform="matrix(.9656 -.2599 .1277 .4743 -38.69 89.913)"
+                        gradientUnits="userSpaceOnUse">
+
+                        <stop offset=".728" stop-color="#554138" stop-opacity="0">
+
+                        </stop>
+
+                        <stop offset="1" stop-color="#554138">
+
+                        </stop>
+
+                    </radialGradient>
+
+                    <path
+                        d="M52.3 96.39l-.05-9.33l28.21-2.37l2.02 3.53s-3.98 4.76-8.43 6.25c-3.31 1.11-6.93 1.84-13.86 2.02l-7.89-.1z"
+                        fill="url(#IconifyId17ecdb2904d178eab8567)">
+
+                    </path>
+
+                    <radialGradient id="IconifyId17ecdb2904d178eab8568" cx="109.017" cy="44.881" r="22.842"
+                        gradientTransform="matrix(-.9656 -.2599 -.1277 .4743 141.87 90.071)"
+                        gradientUnits="userSpaceOnUse">
+
+                        <stop offset=".728" stop-color="#554138" stop-opacity="0">
+
+                        </stop>
+
+                        <stop offset="1" stop-color="#554138">
+
+                        </stop>
+
+                    </radialGradient>
+
+                    <path
+                        d="M50.64 96.39l.05-9.27l-28.03-2.36l-2.01 3.51s3.95 4.73 8.38 6.21c3.29 1.1 6.89 1.83 13.77 2.01l7.84-.1z"
+                        fill="url(#IconifyId17ecdb2904d178eab8568)">
+
+                    </path>
+
+                    <path
+                        d="M51.72 90.68H42.8v10.68c0 4.83 3.63 8.74 8.11 8.74h1.62c4.48 0 8.11-3.92 8.11-8.74V90.68h-8.92z"
+                        fill="#7a4c32">
+
+                    </path>
+
+                    <radialGradient id="IconifyId17ecdb2904d178eab8569" cx="106.37" cy="61.688" r="26.407"
+                        gradientTransform="matrix(-.0746 -.9972 .8311 -.0622 31.463 176.223)"
+                        gradientUnits="userSpaceOnUse">
+
+                        <stop offset=".725" stop-color="#554138" stop-opacity="0">
+
+                        </stop>
+
+                        <stop offset="1" stop-color="#554138">
+
+                        </stop>
+
+                    </radialGradient>
+
+                    <path
+                        d="M91.03 71.78c-1.61 2.15-4.27 4.58-4.57 6.47c2.98-16.16-10.03-14.24-12.72-21.62c-.54-1.49-1.04-3.02-1.1-4.61c-.05-1.19 7.31-12.45 8-13.46c.84-1.24 12.93 8.95 12.93 8.95c-.01.02 6.81 11.78-2.54 24.27z"
+                        fill="url(#IconifyId17ecdb2904d178eab8569)">
+
+                    </path>
+
+                    <radialGradient id="IconifyId17ecdb2904d178eab8570" cx="90.954" cy="49.198" r="9.161"
+                        gradientTransform="matrix(-.9437 .3361 -.2455 -.7109 188.116 83.09)"
+                        gradientUnits="userSpaceOnUse">
+
+                        <stop offset=".663" stop-color="#554138">
+
+                        </stop>
+
+                        <stop offset="1" stop-color="#554138" stop-opacity="0">
+
+                        </stop>
+
+                    </radialGradient>
+
+                    <path
+                        d="M80.18 84.32c-7.11-10.35 10.67-12.33 10.67-12.33c-2.33 2.28-5.43 6.1-4.36 8.54c1.27 2.88 4.94 2.65 4.94 2.65S85 89.06 80.18 84.32z"
+                        fill="url(#IconifyId17ecdb2904d178eab8570)">
+
+                    </path>
+
+                    <path
+                        d="M78.31 51.78H24.63c-5.79 0-10.52 5.04-10.52 11.21S18.84 74.2 24.63 74.2H78.32c5.79 0 10.52-5.04 10.52-11.21S84.1 51.78 78.31 51.78z"
+                        fill="#7a4c32">
+
+                    </path>
+
+                    <path
+                        d="M51.47 13.11c-17.1 0-32.93 18.28-32.93 44.59c0 26.17 16.31 39.1 32.93 39.1S84.4 83.87 84.4 57.7c0-26.31-15.83-44.59-32.93-44.59z"
+                        fill="#a56c43">
+
+                    </path>
+
+                    <g fill="#42312c">
+
+                        <ellipse cx="36.17" cy="60.01" rx="4.84" ry="5.01">
+
+                        </ellipse>
+
+                        <ellipse cx="66.77" cy="60.01" rx="4.84" ry="5.01">
+
+                        </ellipse>
+
+                    </g>
+
+                    <path
+                        d="M59.85 77.04c-3.13 1.86-13.39 1.86-16.52 0c-1.8-1.07-3.63.57-2.89 2.2c.73 1.61 6.33 5.33 11.17 5.33s10.36-3.72 11.1-5.33c.75-1.64-1.06-3.27-2.86-2.2z"
+                        fill="#473530">
+
+                    </path>
+
+                    <g fill="#42312c">
+
+                        <path
+                            d="M43.36 51.13c-.91-1.21-3.02-2.96-7.1-2.96s-6.19 1.75-7.1 2.96c-.4.53-.3 1.15-.02 1.52c.26.35 1.02.67 1.87.38s2.49-1.14 5.26-1.16c2.76.02 4.41.87 5.26 1.16c.85.29 1.61-.03 1.87-.38c.26-.37.36-.99-.04-1.52z">
+
+                        </path>
+
+                        <path
+                            d="M73.79 51.13c-.91-1.21-3.02-2.96-7.1-2.96s-6.19 1.75-7.1 2.96c-.4.53-.3 1.15-.02 1.52c.26.35 1.02.67 1.87.38s2.49-1.14 5.26-1.16c2.76.02 4.41.87 5.26 1.16s1.61-.03 1.87-.38c.26-.37.36-.99-.04-1.52z">
+
+                        </path>
+
+                    </g>
+
+                    <path
+                        d="M55.26 69.09c-.1-.04-.21-.07-.32-.08H48c-.11.01-.21.04-.32.08c-.63.26-.98.91-.68 1.6c.3.69 1.68 2.64 4.47 2.64s4.17-1.95 4.47-2.64c.3-.69-.05-1.34-.68-1.6z"
+                        fill="#875334">
+
+                    </path>
+
+                    <g>
+
+                        <radialGradient id="IconifyId17ecdb2904d178eab8571" cx="106.533" cy="61.498" r="26.233"
+                            gradientTransform="matrix(.0746 -.9972 -.8311 -.0622 71.472 176.564)"
+                            gradientUnits="userSpaceOnUse">
+
+                            <stop offset=".725" stop-color="#554138" stop-opacity="0">
+
+                            </stop>
+
+                            <stop offset="1" stop-color="#554138">
+
+                            </stop>
+
+                        </radialGradient>
+
+                        <path
+                            d="M12.16 71.94c1.61 2.13 4.25 4.55 4.54 6.43c-2.96-16.05 9.97-14.15 12.64-21.48c.54-1.48 1.03-3 1.1-4.58c.05-1.18-7.27-12.37-7.94-13.37c-.83-1.23-12.85 8.9-12.85 8.9s-6.25 12.54 2.51 24.1z"
+                            fill="url(#IconifyId17ecdb2904d178eab8571)">
+
+                        </path>
+
+                        <radialGradient id="IconifyId17ecdb2904d178eab8572" cx="91.193" cy="49.087" r="9.103"
+                            gradientTransform="matrix(.9437 .3361 .2455 -.7109 -85.133 83.043)"
+                            gradientUnits="userSpaceOnUse">
+
+                            <stop offset=".663" stop-color="#554138">
+
+                            </stop>
+
+                            <stop offset="1" stop-color="#554138" stop-opacity="0">
+
+                            </stop>
+
+                        </radialGradient>
+
+                        <path
+                            d="M22.94 84.4c7.06-10.28-10.6-12.25-10.6-12.25c2.32 2.27 5.4 6.07 4.33 8.48c-1.26 2.86-4.91 2.63-4.91 2.63s6.39 5.85 11.18 1.14z"
+                            fill="url(#IconifyId17ecdb2904d178eab8572)">
+
+                        </path>
+
+                    </g>
+
+                    <path
+                        d="M90.86 28.86c-.16-.24-.34-.5-.53-.75c-.35.06-.74.13-1.12.19c-.38-.72-.72-1.29-.97-1.66c-.06-.08-4.83.82-11.92 1.74H24.58c-6.01-.81-10.02-1.61-10.34-1.74c-.2.6-.35 1.18-.46 1.74h-1.02c-1.42 4.01-.57 4.92.03 6.61c-2.48 2.1-5.84 6.67-3.45 12.38c2.41 5.78 8.03 6.38 8.03 6.38c-.61 10.55 2.72 15.67 2.72 15.67s4.13-18.12 3.75-20.89c0 0 7.62-1.51 16.27-6.46c5.85-3.35 9.84-7.27 16.41-8.75c10-2.25 12.23 4.99 12.23 4.99S78 36.53 80.8 49.38c1.15 5.29 1.64 14.12 2.27 19.49c-.05-.47 3.44-6.28 4.05-12.18c.17-1.64 2.07-5.04 3.43-8.32c.57 1.07 1.22 2.36 1.41 3.01c0 0 1.1-4.46 1.18-4.77c2.2-8.78-.55-15.13-2.28-17.75z"
+                        fill="#3c2c23">
+
+                    </path>
+
+                    <g>
+
+                        <radialGradient id="IconifyId17ecdb2904d178eab8573" cx="26.72" cy="83.07" r="16.886"
+                            gradientTransform="matrix(.9907 .1371 .1915 -1.4003 -15.657 157.665)"
+                            gradientUnits="userSpaceOnUse">
+
+                            <stop offset=".598" stop-color="#554138" stop-opacity="0">
+
+                            </stop>
+
+                            <stop offset="1" stop-color="#554138">
+
+                            </stop>
+
+                        </radialGradient>
+
+                        <path
+                            d="M12.56 35.13C10.19 37.25 7 41.97 9.35 47.81c1.77 4.41 8.09 6.33 8.09 6.33c0 .02 1.26.4 1.91.4l1.48-22.02c-3.03 0-5.94.91-7.82 2.23c.02.03-.46.35-.45.38z"
+                            fill="url(#IconifyId17ecdb2904d178eab8573)">
+
+                        </path>
+
+                        <radialGradient id="IconifyId17ecdb2904d178eab8574" cx="76.736" cy="80.423" r="24.991"
+                            gradientTransform="matrix(.3076 .9515 .706 -.2282 -3.648 -7.087)"
+                            gradientUnits="userSpaceOnUse">
+
+                            <stop offset=".699" stop-color="#554138" stop-opacity="0">
+
+                            </stop>
+
+                            <stop offset="1" stop-color="#554138">
+
+                            </stop>
+
+                        </radialGradient>
+
+                        <path
+                            d="M86.75 57.5c.16-1.55 4.34-3.6 6.14-10.26c.19-.71.35-1.43.5-2.15c1.46-8.09-1.16-15.52-2.79-17.98c-2.26-3.41-11.76 3.37-10.14 6.08c5.06 8.47 4.9 16.19 6.29 24.31z"
+                            fill="url(#IconifyId17ecdb2904d178eab8574)">
+
+                        </path>
+
+                    </g>
+
+                    <g>
+
+                        <linearGradient id="IconifyId17ecdb2904d178eab8575" gradientUnits="userSpaceOnUse" x1="51.72"
+                            y1="4" x2="51.72" y2="29.982" gradientTransform="matrix(1 0 0 -1 0 128)">
+
+                            <stop offset="0" stop-color="#709e3b">
+
+                            </stop>
+
+                            <stop offset=".328" stop-color="#73a13e">
+
+                            </stop>
+
+                            <stop offset=".595" stop-color="#7dab47">
+
+                            </stop>
+
+                            <stop offset=".839" stop-color="#8dbc57">
+
+                            </stop>
+
+                            <stop offset="1" stop-color="#9ccc65">
+
+                            </stop>
+
+                        </linearGradient>
+
+                        <path
+                            d="M95.73 120.81c0-17.79-25.56-21.89-34.66-22.78l-7.67 10.54h-3.33l-7.55-10.56c-9.85.93-18.23 3.27-24.28 6.78c-6.98 4.05-10.51 9.44-10.51 16.01v3.2h88.02v-3.19z"
+                            fill="url(#IconifyId17ecdb2904d178eab8575)">
+
+                        </path>
+
+                        <linearGradient id="IconifyId17ecdb2904d178eab8576" gradientUnits="userSpaceOnUse" x1="51.791"
+                            y1="3.482" x2="51.791" y2="28.074" gradientTransform="matrix(1 0 0 -1 0 128)">
+
+                            <stop offset="0" stop-color="#1e88e5">
+
+                            </stop>
+
+                            <stop offset="1" stop-color="#1565c0">
+
+                            </stop>
+
+                        </linearGradient>
+
+                        <path fill="url(#IconifyId17ecdb2904d178eab8576)"
+                            d="M83.64 120.08l-7.17-5.52l.25-.39l-25.99.49l-23.87-.49l.25.39l-7.17 5.52l-.17 3.92h64.04z">
+
+                        </path>
+
+                        <linearGradient id="IconifyId17ecdb2904d178eab8577" gradientUnits="userSpaceOnUse" x1="28.334"
+                            y1="4.008" x2="28.334" y2="27.385" gradientTransform="matrix(1 0 0 -1 0 128)">
+
+                            <stop offset="0" stop-color="#1e88e5">
+
+                            </stop>
+
+                            <stop offset="1" stop-color="#1565c0">
+
+                            </stop>
+
+                        </linearGradient>
+
+                        <path d="M33.78 107.13l-.11-7.82s-5.79 1.2-7.87 2.1l-2.92 6.6l3.78 5.86l7.12-6.74z"
+                            fill="url(#IconifyId17ecdb2904d178eab8577)">
+
+                        </path>
+
+                        <linearGradient id="IconifyId17ecdb2904d178eab8578" gradientUnits="userSpaceOnUse" x1="65.915"
+                            y1="4.008" x2="65.915" y2="27.385" gradientTransform="rotate(180 70.581 64)">
+
+                            <stop offset="0" stop-color="#1e88e5">
+
+                            </stop>
+
+                            <stop offset="1" stop-color="#1565c0">
+
+                            </stop>
+
+                        </linearGradient>
+
+                        <path d="M69.8 107.13l.11-7.82s5.79 1.2 7.87 2.1l2.92 6.6l-3.79 5.86l-7.11-6.74z"
+                            fill="url(#IconifyId17ecdb2904d178eab8578)">
+
+                        </path>
+
+                        <path
+                            d="M72.97 115.61l5.17.98a2.56 2.56 0 0 0 2.98-2.03a2.56 2.56 0 0 0-2.03-2.98l-5.17-.98a2.56 2.56 0 0 0-2.98 2.03c-.26 1.39.64 2.72 2.03 2.98z"
+                            fill="#bdbdbd">
+
+                        </path>
+
+                        <g>
+
+                            <path
+                                d="M30.61 115.61l-5.17.98c-1.38.26-2.72-.65-2.98-2.03a2.56 2.56 0 0 1 2.03-2.98l5.17-.98a2.56 2.56 0 0 1 2.98 2.03c.26 1.39-.64 2.72-2.03 2.98z"
+                                fill="#bdbdbd">
+
+                            </path>
+
+                        </g>
+
+                        <linearGradient id="IconifyId17ecdb2904d178eab8579" gradientUnits="userSpaceOnUse" x1="43.175"
+                            y1="27.731" x2="43.175" y2="12.954" gradientTransform="matrix(1 0 0 -1 0 128)">
+
+                            <stop offset="0" stop-color="#aed581">
+
+                            </stop>
+
+                            <stop offset="1" stop-color="#8bc34a">
+
+                            </stop>
+
+                        </linearGradient>
+
+                        <path d="M42.38 98.03c-2.61.25-5.11.61-7.5 1.05l-.25 20.95l17.09-11.53l-9.34-10.47z"
+                            fill="url(#IconifyId17ecdb2904d178eab8579)">
+
+                        </path>
+
+                        <linearGradient id="IconifyId17ecdb2904d178eab8580" gradientUnits="userSpaceOnUse" x1="60.265"
+                            y1="29.912" x2="60.265" y2="12.478" gradientTransform="matrix(1 0 0 -1 0 128)">
+
+                            <stop offset="0" stop-color="#aed581">
+
+                            </stop>
+
+                            <stop offset="1" stop-color="#8bc34a">
+
+                            </stop>
+
+                        </linearGradient>
+
+                        <path d="M68.56 99.11c-2.96-.56-5.59-.89-7.49-1.08l-9.34 10.48l17.09 11.53l-.26-20.93z"
+                            fill="url(#IconifyId17ecdb2904d178eab8580)">
+
+                        </path>
+
+                    </g>
+
+                    <g>
+
+                        <linearGradient id="IconifyId17ecdb2904d178eab8581" gradientUnits="userSpaceOnUse" x1="51.471"
+                            y1="120.426" x2="51.471" y2="96.641" gradientTransform="matrix(1 0 0 -1 0 128)">
+
+                            <stop offset=".003" stop-color="#fff59d">
+
+                            </stop>
+
+                            <stop offset=".553" stop-color="#fee565">
+
+                            </stop>
+
+                            <stop offset=".996" stop-color="#fdd835">
+
+                            </stop>
+
+                        </linearGradient>
+
+                        <path
+                            d="M77.49 29.04C72.67 17.05 67.93 7.59 61.86 6.86c-1.62-.19-5.86-.73-10.15-.74c-4.45 0-8.95.54-10.62.74c-6.07.73-10.81 10.19-15.64 22.17c-2.62 6.5 54.66 6.5 52.04.01z"
+                            fill="url(#IconifyId17ecdb2904d178eab8581)">
+
+                        </path>
+
+                        <linearGradient id="IconifyId17ecdb2904d178eab8582" gradientUnits="userSpaceOnUse" x1="51.47"
+                            y1="101.453" x2="51.47" y2="72.425" gradientTransform="matrix(1 0 0 -1 0 128)">
+
+                            <stop offset=".003" stop-color="#fff59d">
+
+                            </stop>
+
+                            <stop offset=".553" stop-color="#fee565">
+
+                            </stop>
+
+                            <stop offset=".996" stop-color="#fdd835">
+
+                            </stop>
+
+                        </linearGradient>
+
+                        <path
+                            d="M91.57 24.72c-9.43 1.71-25.18 3.7-39.53 3.76H50.9c-14.35-.06-30.1-2.05-39.53-3.76c-8.14-1.48-8.43 3.84-8.43 3.84s2.58-3.19 7.11 1.23c7.03 6.86 18.48 17.75 40.77 17.84c.22 0 .43-.01.65-.01c.22 0 .43.01.65.01c22.3-.1 33.74-10.98 40.77-17.84c4.53-4.42 7.11-1.23 7.11-1.23s-.29-5.32-8.43-3.84z"
+                            fill="url(#IconifyId17ecdb2904d178eab8582)">
+
+                        </path>
+
+                        <g>
+
+                            <path
+                                d="M51.47 20.37c-15.18 0-25.05 6.55-25.05 6.55s14.37 1.47 25.05 1.47s25.05-1.47 25.05-1.47s-9.87-6.55-25.05-6.55z"
+                                fill="#78909c">
+
+                            </path>
+
+                        </g>
+
+                    </g>
+
+                    <g>
+
+                        <path fill="none" stroke="#d18100" stroke-width="5" stroke-miterlimit="10"
+                            d="M107.48 109.01V124">
+
+                        </path>
+
+                        <path
+                            d="M108.64 116.76h-2.32c-1.39 0-2.51 0-2.51-2.51v-12.01h7.33v12.01c.01 2.13-1.12 2.51-2.5 2.51z"
+                            fill="#636363">
+
+                        </path>
+
+                        <path
+                            d="M116.73 99.5c-1.84 0-7.74.06-9.07.06c-2.12 0-7.74-.19-10.03-.19c-7.48 0-7.54-26.69-7.54-26.69v24.71c0 6.69 3.42 8.83 9.42 9.05h15.38c5.42 0 7.35-3.71 7.35-8.15l-.38-4.86c-.02.01-1.47 6.07-5.13 6.07z"
+                            fill="#616161">
+
+                        </path>
+
+                        <linearGradient id="IconifyId17ecdb2904d178eab8583" gradientUnits="userSpaceOnUse" x1="106.778"
+                            y1="19.532" x2="106.778" y2="78.202" gradientTransform="matrix(1 0 0 -1 0 128)">
+
+                            <stop offset="0" stop-color="#757575">
+
+                            </stop>
+
+                            <stop offset=".482" stop-color="#9e9e9e">
+
+                            </stop>
+
+                        </linearGradient>
+
+                        <path
+                            d="M123.37 38.4c-.11-.42-.73-.41-.83.01l-1.15 4.68l-2 52.18s-.01.27-.01.41c0 1.54-1.19 2.64-2.73 2.64s-2.81-1.12-2.81-2.66c0-.22.6-52.38.6-52.38l-1.19-5.13c-.11-.42-.72-.42-.83-.01l-1.35 5.05l-.62 52.15c0 1.7-1.03 2.99-2.73 2.99s-3.08-1.38-3.08-3.08l-.3-52.17l-1.18-4.94c-.11-.41-.71-.41-.83 0l-1.5 5.15l.03 51.86c0 1.76-1.22 3.19-2.98 3.19c-1.96 0-3.4-1.43-3.4-3.19l-2.04-52.06l-1.34-4.97c-.11-.42-.6-.34-.72.07l-1.37 5l1.6 53.63c0 4.52 2.88 7.94 8.88 8.17h15.38c5.42 0 7.5-3.73 7.5-8.17l2.16-53.4l-1.16-5.02z"
+                            fill="url(#IconifyId17ecdb2904d178eab8583)">
+
+                        </path>
+
+                    </g>
+
+                </svg>
+            </div>
+        </section>
+
+        <!--========== ABOUT ==========-->
+        <section class="about section bd-container" id="about">
+            <div class="about__container  bd-grid">
+                <div class="about__data">
+                    <span class="section-subtitle about__initial">About us</span>
+                    <h2 class="section-title about__initial">We try our best in connecting farmers <br> to the worldwide
+                        market</h2>
+                    <p class="about__description">Also we help farmers know the places favourable to the yields they are
+                        planning to grow using a weather forecast system</p>
+                    <a href="./weather-app/index.html" class="button">Explore Our Weather System</a>
+                </div>
+
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.843 511.843" xml:space="preserve">
+                    <polygon style="fill:#646C77;"
+                        points="451.033,92.304 255.921,22.542 63.417,92.554 11.878,235.626 501.018,235.626 " />
+                    <path style="fill:#424953;" d="M511.843,241.296c0-1.273-0.219-2.491-0.625-3.624l-50.672-152L255.921,9.438L51.296,85.673
+                   l-50.664,152C0.226,238.805,0,240.023,0,241.296c0,5.889,4.772,10.669,10.661,10.669h53.983c5.889,0,10.668-4.78,10.668-10.669
+                   s-4.78-10.661-10.668-10.661h-39.2l39.628-118.861l3.226-9.685l9.56-3.562l178.063-66.332l178.07,66.332l9.56,3.562l3.218,9.685
+                   l39.629,118.861h-39.191c-5.904,0-10.684,4.772-10.684,10.661s4.779,10.669,10.684,10.669h53.983v-0.008
+                   C507.064,251.957,511.843,247.186,511.843,241.296z" />
+                    <polygon style="fill:#EC5564;" points="469.199,246.474 426.525,118.514 254.796,54.532 85.309,118.514 42.65,246.474 
+                   42.65,502.405 469.199,502.405 " />
+                    <path style="fill:#FECD57;"
+                        d="M149.289,491.734c-5.881,0-10.668-4.795-10.668-10.668v-127.96c0-5.873,4.788-10.653,10.668-10.653
+                   h213.255c5.889,0,10.685,4.78,10.685,10.653v127.961c0,5.873-4.796,10.668-10.685,10.668H149.289V491.734z" />
+                    <g>
+                        <path style="fill:#F5BA45;" d="M362.544,331.784H149.289c-11.73,0-21.329,9.607-21.329,21.322v127.961
+                       c0,11.746,9.599,21.338,21.329,21.338h213.255c11.747,0,21.338-9.592,21.338-21.338v-127.96
+                       C383.882,341.392,374.291,331.784,362.544,331.784z M362.544,481.036c0,0-0.016,0.031-0.031,0.031H149.328
+                       c-0.016,0-0.031-0.031-0.031-0.031l-0.008-127.898c0.008,0,0.023-0.016,0.039-0.031h213.185c0.016,0.016,0.031,0.031,0.031,0.031
+                       V481.036z" />
+                        <path style="fill:#F5BA45;"
+                            d="M362.544,342.453h-13.87l-92.753,61.825l-92.745-61.825h-13.887c-5.428,0-9.911,4.062-10.575,9.31
+                       l97.986,65.324l-97.986,65.324c0.664,5.248,5.147,9.324,10.575,9.324h13.887l92.745-61.824l92.753,61.824h13.87
+                       c5.437,0,9.92-4.076,10.591-9.324l-98.001-65.324l98.001-65.324C372.464,346.514,367.981,342.453,362.544,342.453z" />
+                    </g>
+                    <rect x="152.291" y="164.421" style="fill:#5E9CEA;" width="207.25" height="100.13" />
+                    <g>
+                        <path style="fill:#D94452;" d="M149.289,161.173v106.631h213.255V161.173H149.289z M341.238,246.474H170.611v-63.98h170.627
+                       L341.238,246.474L341.238,246.474z" />
+                        <rect x="245.261" y="173.421" style="fill:#D94452;" width="21.321" height="80.31" />
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+        <!--========== SERVICES ==========-->
+        <section class="services section bd-container" id="services">
+            <span class="section-subtitle">Offering</span>
+            <h2 class="section-title">Our Services</h2>
+
+            <div class="services__container  bd-grid">
+                <div class="services__content">
+                    <svg width="100px" height="100px" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9 12V21M9 12L10.8462 7L15 5L19.1538 7L21 12V21H9M9 12V8M9 21H3V6C3 4.34315 4.34315 3 6 3C7.65685 3 9 4.34315 9 6V8M9 8H3M13 15H17V21H13V15ZM14.5 10V11H15.5V10H14.5Z"
+                            stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <h3 class="services__title"> We Provide Excellent Farming Equipments</h3>
+                    <p class="services__description">We offer our clients excellent quality Equipments in which they use
+                        in the daiy agricultural activities.</p>
+                </div>
+
+                <div class="services__content">
+                    <svg fill="#000000" width="100px" height="100px" viewBox="0 0 14 14" role="img" focusable="false"
+                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="m 3.0380378,1 c -0.066717,0 -0.1365,0.02237 -0.1875,0.07337 L 1.595103,2.328804 c -0.102,0.102 -0.102,0.264848 0,0.366848 l 1.0027174,0.994565 a 0.26229866,0.26229866 0 0 0 0.089674,0.08967 L 4.1548857,5.255431 C 4.1921897,5.098387 4.2757988,4.956083 4.3994509,4.847822 L 4.4402119,4.807062 4.2364075,4.603258 5.1249945,3.714671 5.3858641,3.983693 5.7771684,3.633149 4.3016249,2.157606 a 0.26089565,0.26089565 0 0 0 -0.032609,-0.04076 l -0.024457,-0.0163 A 0.26089565,0.26089565 0 0 0 4.2037979,2.067936 L 3.2173856,1.07337 C 3.1663856,1.02237 3.1047552,1 3.0380378,1 Z m 7.9239132,0 c -0.06672,0 -0.128348,0.02237 -0.179348,0.07337 L 9.755429,2.100543 a 0.26089565,0.26089565 0 0 0 -0.07337,0.07337 L 8.222819,3.633152 8.614124,3.983696 8.874993,3.714674 9.76358,4.603261 9.559776,4.807065 9.600536,4.847825 C 9.724449,4.956347 9.807797,5.09839 9.845101,5.255434 L 11.30434,3.788042 a 0.26229866,0.26229866 0 0 0 0.08967,-0.08967 l 1.01087,-1.002718 c 0.102,-0.102 0.102,-0.264848 0,-0.366848 L 11.149451,1.07337 C 11.098451,1.02237 11.028668,1 10.961951,1 Z M 3.0380378,1.627717 3.706516,2.304348 2.8260813,3.184783 2.1494508,2.516304 3.0380378,1.627717 Z m 7.9239132,0 0.888587,0.888587 -0.676631,0.668479 -0.880434,-0.880435 0.668478,-0.676631 z M 4.081516,2.671196 4.7499943,3.347826 3.8695595,4.228261 3.1929291,3.559783 4.081516,2.671196 Z m 5.836957,0 0.888587,0.888587 -0.676631,0.668478 -0.880435,-0.880435 0.668479,-0.67663 z m -2.9184787,0.67663 c -0.061304,0 -0.1220217,0.02217 -0.1711956,0.06522 l -2.013587,1.76087 4.3695653,0 L 7.17119,3.413046 C 7.122016,3.37 7.0612987,3.347826 6.9999943,3.347826 Z M 4.6358639,5.695652 4.1304291,12.722826 c -0.00522,0.07226 0.024065,0.142696 0.07337,0.195652 C 4.253103,12.971435 4.3187769,13 4.3912987,13 L 9.60869,13 c 0.07226,0 0.138456,-0.02857 0.1875,-0.08152 0.0493,-0.05296 0.07859,-0.123391 0.07337,-0.195652 l -0.505435,-7.027174 -4.7282611,0 z M 6.7391247,7 l 0.5217392,0 0,0.782609 -0.5217392,0 0,-0.782609 z M 3.9510813,7.904891 1.595103,10.26087 c -0.102,0.102 -0.102,0.264847 0,0.366847 l 1.2554348,1.255435 c 0.050869,0.05087 0.1207174,0.07337 0.1875,0.07337 0.066783,0 0.1284782,-0.0225 0.1793478,-0.07337 l 0.4891304,-0.48913 0.097826,-1.38587 -0.611413,-0.611413 0.6766304,-0.668478 0.024457,0.0163 0.057065,-0.839674 z m 6.0978257,0 0.05707,0.839674 0.02446,-0.0163 0.676631,0.668478 -0.611414,0.611413 0.09783,1.38587 0.48913,0.48913 c 0.05087,0.05061 0.112565,0.07337 0.179348,0.07337 0.06678,0 0.13663,-0.0225 0.1875,-0.07337 l 1.255435,-1.255435 c 0.102,-0.102 0.102,-0.264847 0,-0.366847 L 10.048918,7.904895 Z M 2.8260813,9.771739 3.706516,10.652174 3.0380378,11.328804 2.1494508,10.440217 2.8260813,9.771739 Z m 8.3478257,0 0.676631,0.668478 -0.888587,0.888587 -0.668478,-0.67663 0.880434,-0.880435 z m -4.1739127,0.619565 c 0.4322609,0 0.7826087,0.350348 0.7826087,0.782609 l 0,1.304348 -1.5652174,0 0,-1.304348 c 0,-0.432261 0.3503478,-0.782609 0.7826087,-0.782609 z" />
+                    </svg>
+                    <h3 class="services__title">Fast Crop yields</h3>
+                    <p class="services__description">We offer our clients excellent quality yields for many years, with
+                        the best types in the world.</p>
+                </div>
+
+                <div class="services__content">
+                    <svg fill="#000000" height="100px" width="100px" version="1.1" id="Capa_1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 491.043 491.043" xml:space="preserve">
+                        <g>
+                            <path d="M99.869,419.639c-6.705,0-13.082-1.203-19.281-2.904v41.754c0,6.36,5.157,11.518,11.518,11.518h53.744
+                           c6.359,0,11.518-5.157,11.518-11.518v-29.377c-10.436-3.032-20.164-8.19-28.313-15.616
+                           C119.871,417.521,109.975,419.639,99.869,419.639z" />
+                            <path
+                                d="M262.689,432.15c-2.23,0-4.403-0.312-6.602-0.497v26.836c0,6.36,5.157,11.518,11.518,11.518h53.753
+                           c6.36,0,11.516-5.157,11.516-11.518v-67.113C318.254,416.174,292.228,432.15,262.689,432.15z" />
+                            <path d="M358.322,295.757c-52.508,0-88.936-73.025-95.057-130.105c-36.443-4.821-62.301-25.905-62.301-52.791
+                           c0-3.913,0.626-7.674,1.668-11.307c-7.988,4.507-14.693,11.276-19.265,19.584c-7.7-5.565-17.004-8.83-27.014-8.83
+                           c-23.29,0-42.699,17.605-47.174,40.993c-35.001,4.307-62.768,32.955-67.98,69.832C17.925,226.758,0,247.891,0,273.677
+                           c0,28.311,21.559,51.272,48.162,51.272c0.77,0,1.491-0.2,2.253-0.24c-1.323,4.869-2.253,9.921-2.253,15.238
+                           c0,30.397,23.146,55.052,51.707,55.052c13.377,0,25.439-5.55,34.623-14.42c8.157,15.959,23.852,26.932,42.13,26.932
+                           c17.085,0,31.994-9.529,40.544-23.796c10.65,14.389,26.98,23.796,45.523,23.796c29.065,0,52.941-22.777,57.256-52.437
+                           c3.538,0.578,7.059,1.148,10.732,1.148c39.26,0,71.068-33.886,71.068-75.681c0-0.946-0.152-1.844-0.192-2.782
+                           C388.912,288.876,374.38,295.757,358.322,295.757z" />
+                            <path
+                                d="M437.3,83.668c-6.738,0-13.154,0.708-19.098,1.942c2.343-4.312,3.673-9.253,3.673-14.505
+                           c0-16.807-13.625-30.432-30.432-30.432c-2.685,0-5.287,0.351-7.767,1.004c-2.88-11.816-13.832-20.64-27.055-20.64
+                           c-12.904,0-23.656,8.427-26.855,19.821c-1.094-0.12-2.204-0.185-3.33-0.185c-16.807,0-30.432,13.625-30.432,30.432
+                           c0,5.363,1.393,10.399,3.827,14.775c-6.322-1.416-13.222-2.211-20.485-2.211c-29.683,0-53.743,13.073-53.743,29.193
+                           c0,16.13,24.061,29.195,53.743,29.195c2.84,0,5.559-0.225,8.276-0.458c-0.184,2.583-0.632,5.069-0.632,7.708
+                           c0,47.897,31.937,121.812,71.331,121.812c39.389,0,71.325-73.915,71.325-121.812c0-2.64-0.448-5.125-0.641-7.708
+                           c2.719,0.233,5.445,0.458,8.293,0.458c29.683,0,53.743-13.065,53.743-29.195C491.043,96.741,466.982,83.668,437.3,83.668z
+                            M331.992,161.239c-5.301,0-9.593-4.29-9.593-9.591c0-5.302,4.292-9.593,9.593-9.593c5.302,0,9.593,4.29,9.593,9.593
+                           C341.585,156.949,337.294,161.239,331.992,161.239z M384.638,161.239c-5.294,0-9.584-4.29-9.584-9.591
+                           c0-5.302,4.29-9.593,9.584-9.593c5.309,0,9.601,4.29,9.601,9.593C394.238,156.949,389.946,161.239,384.638,161.239z" />
+                        </g>
+                    </svg>
+                    <h3 class="services__title">Our Partners</h3>
+                    <p class="services__description">We are working with the WHO and UNICEF to provide farmers in
+                        developing countries opportunities to grow their market also making them provide food in their
+                        region.</p>
+                </div>
+            </div>
+        </section>
+
+        <!--========== MENU ==========-->
+        <section class="menu section bd-container" id="menu">
+            <span class="section-subtitle">Special</span>
+            <h2 class="section-title">Products of The Week</h2>
+
+            <div class="menu__container bd-grid">
+                <div class="menu__content">
+                    <img src="assets/img/plate1.jpg" alt="" class="menu__img">
+                    <h3 class="menu__name">Harvesting Machine</h3>
+                    <span class="menu__detail">FarmingPro</span>
+                    <span class="menu__preci">$220.00</span>
+                    <a href="in2.html" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+                </div>
+
+                <div class="menu__content">
+                    <img src="assets/img/plate2.jpg" alt="" class="menu__img">
+                    <h3 class="menu__name">Drone Sprinkler</h3>
+                    <span class="menu__detail">FarmingPro</span>
+                    <span class="menu__preci">$127.00</span>
+                    <a href="in2.html" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+                </div>
+
+                <div class="menu__content">
+                    <img src="assets/img/plate3.jpg" alt="" class="menu__img">
+                    <h3 class="menu__name">Ploughing Machine</h3>
+                    <span class="menu__detail">FarmingPro</span>
+                    <span class="menu__preci">$900.50</span>
+                    <a href="in2.html" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!--===== APP =======-->
+        <section class="app section bd-container">
+            <div class="app__container bd-grid">
+                <div class="app__data">
+                    <span class="section-subtitle app__initial">App</span>
+                    <h2 class="section-title app__initial">App is avalaible</h2>
+                    <p class="app__description">Find our application and download it, you can make reservations, food
+                        orders, see your deliveries on the way and much more.</p>
+                    <div class="app__stores">
+                        <a href="#"><img src="assets/img/app1.png" alt="" class="app__store"></a>
+                        <a href="#"><img src="assets/img/app2.png" alt="" class="app__store"></a>
+                    </div>
+                </div>
+
+                <svg width="400px" height="400px" viewBox="-13.5 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                    <g id="App_design" data-name="App design" transform="translate(-254.07 -70.142)">
+                        <g id="Group_6" data-name="Group 6">
+                            <g id="Group_5" data-name="Group 5">
+                                <g id="Group_4" data-name="Group 4">
+                                    <g id="Group_3" data-name="Group 3">
+                                        <path id="Path_4" data-name="Path 4"
+                                            d="M307.07,78.142v64a8.01,8.01,0,0,1-8,8h-37a8.011,8.011,0,0,1-8-8v-64a8.01,8.01,0,0,1,8-8h37A8.009,8.009,0,0,1,307.07,78.142Zm-6,64v-8h-41v8a2.032,2.032,0,0,0,2,2h37A2.026,2.026,0,0,0,301.07,142.142Zm0-14v-50a2.025,2.025,0,0,0-2-2h-37a2.032,2.032,0,0,0-2,2v50Z"
+                                            fill="#104386" />
+                                        <path id="Path_5" data-name="Path 5"
+                                            d="M301.07,78.142v50h-41v-50a2.032,2.032,0,0,1,2-2h37A2.025,2.025,0,0,1,301.07,78.142Zm-4.51,40.5v-34.5a3,3,0,0,0-3-3H267.58a3,3,0,0,0-3,3v34.5a3,3,0,0,0,3,3h25.98A3,3,0,0,0,296.56,118.642Z"
+                                            fill="#f60" />
+                                        <path id="Path_6" data-name="Path 6"
+                                            d="M296.56,84.142v34.5a3,3,0,0,1-3,3H267.58a3,3,0,0,1-3-3v-34.5a3,3,0,0,1,3-3h25.98A3,3,0,0,1,296.56,84.142Zm-6,31.5v-7.09h-7.99v7.09Zm0-13.09V87.142h-7.99v15.41Zm-13.99,13.09v-28.5h-5.99v28.5Z"
+                                            fill="#104386" />
+                                        <rect id="Rectangle_3" data-name="Rectangle 3" width="7.99" height="7.089"
+                                            transform="translate(282.57 108.552)" fill="#ffffff" />
+                                        <rect id="Rectangle_4" data-name="Rectangle 4" width="7.99" height="15.411"
+                                            transform="translate(282.57 87.142)" fill="#69f" />
+                                        <path id="Path_7" data-name="Path 7"
+                                            d="M280.57,136.462a2.84,2.84,0,1,1-2.839,2.84A2.837,2.837,0,0,1,280.57,136.462Z"
+                                            fill="#104386" />
+                                        <path id="Path_8" data-name="Path 8"
+                                            d="M299.07,144.142h-18.5v-2a2.84,2.84,0,0,0,0-5.68v-2.32h20.5v8A2.026,2.026,0,0,1,299.07,144.142Z"
+                                            fill="#69f" />
+                                        <path id="Path_9" data-name="Path 9"
+                                            d="M280.57,144.142h-18.5a2.032,2.032,0,0,1-2-2v-8h20.5v2.32a2.84,2.84,0,0,0,0,5.68Z"
+                                            fill="#69f" />
+                                        <rect id="Rectangle_5" data-name="Rectangle 5" width="5.99" height="28.5"
+                                            transform="translate(270.58 87.142)" fill="#ffffff" />
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+        <!--========== CONTACT US ==========-->
+        <section class="contact section bd-container" id="contact">
+            <div class="contact__container bd-grid">
+                <div class="contact__data">
+                    <span class="section-subtitle contact__initial">Let's talk</span>
+                    <h2 class="section-title contact__initial">Contact us</h2>
+                    <p class="contact__description">If you want to order or share with us your products, contact us and
+                        we will attend you quickly, with our 24/7 chat service.</p>
+                </div>
+
+                <div class="contact__button">
+                    <a href="#" class="button">Contact us now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--========== FOOTER ==========-->
+    <footer class="footer section bd-container">
+        <div class="footer__container bd-grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">FarmPro</a>
+                <span class="footer__description">Industry</span>
+                <div>
+                    <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                </div>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Services</h3>
+                <ul>
+                    <li><a href="#" class="footer__link">Delivery</a></li>
+                    <li><a href="#" class="footer__link">Farming Equipments</a></li>
+                    <li><a href="#" class="footer__link">Markets</a></li>
+                    <li><a href="#" class="footer__link">Crop yields</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Information</h3>
+                <ul>
+                    <li><a href="#" class="footer__link">Event</a></li>
+                    <li><a href="#" class="footer__link">Contact us</a></li>
+                    <li><a href="#" class="footer__link">Privacy policy</a></li>
+                    <li><a href="#" class="footer__link">Terms of services</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Adress</h3>
+                <ul>
+                    <li>Kigali-Rwanda</li>
+                    <li>Nyarugenge-Nyakabanda</li>
+                    <li>+250-793-216-126</li>
+                    <li>mahingarodin@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="footer__copy">&#169; 2024 Bedimcode. All right reserved</p>
+    </footer>
+
+    <!--========== SCROLL REVEAL ==========-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--========== MAIN JS ==========-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FarmPro</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron text-center bg-success text-white" id="cont">
+        <h2>FarmerPro</h2>
+        <h4> Insert, Update & Delete Farmer Details</h4>
+        <i class='bx bx-moon change-theme' id="theme-button"></i>
+    </div>
+    <div class="form-row">
+        <!-- Your form elements here -->
+    </div>
+    <div class="row pt-3">
+        <div class="col-md-12 col-sm-12 col-12 p-2">
+            <div>
+                <label for="Search"><i class="bx bx-lens"></i>Search Farmers</label>
+                <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for farmers..">
+            </div>
+            <table id="tblData" class="table table-bordered table-hover table-striped">
+                <!-- Your table content here -->
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    const themeButton = document.getElementById('theme-button')
+    const darkTheme = 'dark-theme'
+    const iconTheme = 'bx-sun'
+
+    // Previously selected topic (if user selected)
+    const selectedTheme = localStorage.getItem('selected-theme')
+    const selectedIcon = localStorage.getItem('selected-icon')
+
+    // We obtain the current theme that the interface has by validating the dark-theme class
+    const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+    const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx-moon' : 'bx-sun'
+
+    // We validate if the user previously chose a topic
+    if (selectedTheme) {
+        // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+        document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+        themeButton.classList[selectedIcon === 'bx-moon' ? 'add' : 'remove'](iconTheme)
+    }
+
+    // Activate / deactivate the theme manually with the button
+    themeButton.addEventListener('click', () => {
+        // Add or remove the dark / icon theme
+        document.body.classList.toggle(darkTheme)
+        themeButton.classList.toggle(iconTheme)
+        // We save the theme and the current icon that the user chose
+        localStorage.setItem('selected-theme', getCurrentTheme())
+        localStorage.setItem('selected-icon', getCurrentIcon())
+    })
+</script>
+<!-- <script src="./assets/js/main.js"></script> -->
+</body>
+</html>
